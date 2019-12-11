@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100px"
             android:layout_marginRight="100px"
-            android:layout_marginBottom="50px"
+            android:layout_marginBottom="70px"
             android:ems="10"
             android:hint="CONTRASEÑA"
             android:inputType="textPassword" />
@@ -41,7 +41,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100px"
             android:layout_marginRight="100px"
+            android:layout_marginBottom="20px"
             android:text="INICIAR"
             android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:text="REGISTRARSE"
+            android:textSize="18sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnInicio.setOnClickListener{iniciar()}
+        btnRegistro.setOnClickListener{irRegistro()}
     }
 
     private fun iniciar(){
@@ -30,4 +31,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
+
+    private fun irRegistro(){
+        val intent = Intent(this, RegistroActivity::class.java)
+        startActivity(intent)
+    }
+
 }
