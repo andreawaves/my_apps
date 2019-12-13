@@ -31,13 +31,17 @@ class MainActivity : AppCompatActivity() {
         val usuario = etUsuario.text.toString()
         val contrasena = etContrasena.text.toString()
 
-        val persona = realm.where(Persona::class.java).equalTo("usuario",usuario).findFirst()
 
-        if (contrasena == persona!!.contrasena){
-            continuar()
-        } else {
-            Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_LONG).show()
-        }
+        val persona = realm.where(Persona::class.java).equalTo("usuario",usuario).findFirst()!!
+
+            if (contrasena == persona!!.contrasena){
+                continuar()
+            } else {
+                Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_LONG).show()
+            }
+
+
+
     }
 
     private fun continuar() {
