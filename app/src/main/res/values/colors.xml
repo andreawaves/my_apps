@@ -3,4 +3,8 @@
     <color name="colorPrimary">#70dffd</color>
     <color name="colorPrimaryDark">#70dffd</color>
     <color name="colorAccent">#70DFFD</color>
+    <color name="azulOscuro">#00264E</color>
+    <color name="amarilloHint">#92FFC107</color>
+    <color name="amarilloText">#FFC107</color>
+    <color name="celeste">#70DFFD</color>
 </resources>

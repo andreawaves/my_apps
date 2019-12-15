@@ -4,60 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg2"
     tools:context=".RegistroActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100px"
+            android:layout_gravity="center"
             android:gravity="center"
             android:text="Registro"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textStyle="bold" />
+            android:textColor="#FFC107"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/delius" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.19">
 
         <EditText
             android:id="@+id/et_iusuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
-            android:layout_marginRight="50px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginBottom="20px"
+            android:backgroundTint="@color/colorPrimary"
             android:ems="10"
+            android:fontFamily="@font/delius"
+            android:hapticFeedbackEnabled="false"
             android:hint="Ingrese usuario"
-            android:inputType="textPersonName" />
+            android:singleLine="false"
+            android:textColor="#FFC107"
+            android:textColorHighlight="#FFC107"
+            android:textColorHint="#92FFC107"
+            android:textColorLink="#FFC107"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
 
         <EditText
             android:id="@+id/et_ipassword1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
-            android:layout_marginRight="50px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginBottom="20px"
+            android:backgroundTint="@color/colorPrimary"
             android:ems="10"
+            android:fontFamily="@font/delius"
+            android:hapticFeedbackEnabled="false"
             android:hint="Ingrese password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:singleLine="false"
+            android:textColor="#FFC107"
+            android:textColorHighlight="#FFC107"
+            android:textColorHint="#92FFC107"
+            android:textColorLink="#FFC107"
+            android:textSize="18sp"
+            android:typeface="monospace" />
 
         <EditText
             android:id="@+id/et_ipassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
-            android:layout_marginRight="50px"
-            android:layout_marginBottom="50px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginBottom="100px"
+            android:backgroundTint="@color/colorPrimary"
             android:ems="10"
+            android:fontFamily="@font/delius"
+            android:hapticFeedbackEnabled="false"
             android:hint="Reingrese password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:singleLine="false"
+            android:textColor="#FFC107"
+            android:textColorHighlight="#FFC107"
+            android:textColorHint="#92FFC107"
+            android:textColorLink="#FFC107"
+            android:textSize="18sp"
+            android:typeface="monospace" />
 
         <Button
             android:id="@+id/btn_guardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
-            android:layout_marginRight="50px"
-            android:text="Guardar" />
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_weight="1"
+            android:fontFamily="@font/delius"
+            android:shadowColor="#FFFFFF"
+            android:text="Guardar"
+            android:textColor="#26347E"
+            android:textColorHighlight="#26347E"
+            android:textColorHint="#26347E"
+            android:textColorLink="#26347E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

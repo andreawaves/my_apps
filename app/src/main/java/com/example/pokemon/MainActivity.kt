@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun login(usuario:String, password:String){
-
-
         val resultados = realm.where(Entrenador::class.java).equalTo("usuario",usuario).findAll()
 
         if (resultados.isEmpty()) {
@@ -53,9 +51,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Login incorrecto", Toast.LENGTH_LONG).show()
             }
         }
-
-
-
     }
 
     private fun irRegistro() {
