@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg2"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
 
         <TextView
             android:id="@+id/x"
@@ -18,17 +25,36 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Pokemon"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFC107"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_marginBottom="100px"
             android:gravity="center"
             android:text="Trading cards"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFC107"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.24000001"
+        tools:layout_editor_absoluteX="-16dp">
 
         <EditText
             android:id="@+id/et_usuario"
@@ -36,9 +62,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50px"
             android:layout_marginRight="50px"
+            android:layout_marginBottom="20px"
             android:ems="10"
+            android:hapticFeedbackEnabled="false"
             android:hint="Ingrese usuario"
-            android:inputType="textPersonName" />
+            android:singleLine="false"
+            android:textColor="#FFC107"
+            android:textColorHighlight="#FFC107"
+            android:textColorHint="#B0FFC107"
+            android:textColorLink="#FFC107"
+            android:textSize="18sp"
+            android:backgroundTint="@color/colorPrimary"
+            android:typeface="monospace" />
 
         <EditText
             android:id="@+id/et_password"
@@ -48,8 +83,16 @@
             android:layout_marginRight="50px"
             android:layout_marginBottom="50px"
             android:ems="10"
+            android:hapticFeedbackEnabled="false"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:singleLine="false"
+            android:textColor="#FFC107"
+            android:textColorHighlight="#FFC107"
+            android:textColorHint="#B0FFC107"
+            android:textColorLink="#FFC107"
+            android:backgroundTint="@color/colorPrimary"
+            android:textSize="18sp"
+            android:typeface="monospace" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,7 +105,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50px"
                 android:layout_weight="1"
-                android:text="Login" />
+                android:shadowColor="#FFFFFF"
+                android:text="Login"
+                android:textColor="#26347E"
+                android:textColorHighlight="#26347E"
+                android:textColorHint="#26347E"
+                android:textColorLink="#26347E"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
 
             <Button
                 android:id="@+id/btn_registro"
@@ -70,7 +121,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="50px"
                 android:layout_weight="1"
-                android:text="Registro" />
+                android:shadowColor="#FFFFFF"
+                android:text="Registro"
+                android:textColor="#26347E"
+                android:textColorHighlight="#26347E"
+                android:textColorHint="#26347E"
+                android:textColorLink="#26347E"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
