@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             val entrenador = resultados.first()!!
             if (entrenador.usuario!="" && entrenador.password.equals(password)) {
-                Toast.makeText(this, "EXCELENTE", Toast.LENGTH_LONG).show()
+                irList()
             } else {
                 Toast.makeText(this, "Login incorrecto", Toast.LENGTH_LONG).show()
             }
@@ -55,6 +55,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun irRegistro() {
         val intent = Intent(this, RegistroActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun irList() {
+        val intent = Intent(this, ListActivity::class.java)
         startActivity(intent)
     }
 }

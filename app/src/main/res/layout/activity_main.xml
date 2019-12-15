@@ -93,6 +93,7 @@
             android:textColorHighlight="#FFC107"
             android:textColorHint="#92FFC107"
             android:textColorLink="#FFC107"
+            android:inputType="textPassword"
             android:textSize="18sp"
             android:typeface="monospace" />
 
