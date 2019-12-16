@@ -21,7 +21,7 @@ class RegistroActivity : AppCompatActivity() {
 
         Realm.init(this)
 
-        val config = RealmConfiguration.Builder()
+        val config = RealmConfiguration.Builder().directory(getExternalFilesDir(null)!!)
             .name("entrenador.realm").build()
 
         realm = Realm.getInstance (config)
@@ -33,20 +33,28 @@ class RegistroActivity : AppCompatActivity() {
         val password1 = et_ipassword1.text.toString().trim()
         val password2 = et_ipassword2.text.toString().trim()
 
-        //Verificar si están vacíos
         if (usuario == "" || password1 == "" || password2 == ""){
-            Toast.makeText(this, "Complete los campos", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_LONG).show()
         } else {
-            //Verificar si las contraseñas coinciden
-            if (password1.equals(password2)) {
-                guardar(usuario,password1)
-            } else {
+
+            if (password1 != password2) {
                 Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show()
+            } else if ( !nuevo(usuario) ){
+                Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_LONG).show()
+            } else {
+                guardar(usuario,password1)
             }
         }
     }
 
-    //TODO Que no exista el usuario
+    private fun nuevo(usuario: String):Boolean {
+        val resultados = realm.where(Entrenador::class.java).equalTo("usuario",usuario).findAll()
+        if (resultados.isEmpty()) {
+            return true
+        }
+        return false
+    }
+
 
     private fun guardar(usuario:String, password:String){
         realm.beginTransaction()

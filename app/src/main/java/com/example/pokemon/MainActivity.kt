@@ -22,19 +22,21 @@ class MainActivity : AppCompatActivity() {
 
         Realm.init(this)
 
-        val config = RealmConfiguration.Builder()
+        val config = RealmConfiguration.Builder().directory(getExternalFilesDir(null)!!)
             .name("entrenador.realm").build()
 
-        realm = Realm.getInstance (config)
+        realm = Realm.getInstance(config)
     }
 
     private fun verificar() {
         val usuario = et_usuario.text.toString()
         val password = et_password.text.toString()
-        if (usuario.trim() != "" && password.trim() != "") {
-            login(usuario,password)
+        if (usuario.trim() == ""){
+            Toast.makeText(this, "Ingrese su usuario", Toast.LENGTH_LONG).show()
+        } else if (password.trim() == "") {
+            Toast.makeText(this, "Ingrese su password", Toast.LENGTH_LONG).show()
         } else {
-            Toast.makeText(this, "Complete los campos", Toast.LENGTH_LONG).show()
+            login(usuario,password)
         }
     }
 
@@ -42,13 +44,13 @@ class MainActivity : AppCompatActivity() {
         val resultados = realm.where(Entrenador::class.java).equalTo("usuario",usuario).findAll()
 
         if (resultados.isEmpty()) {
-            Toast.makeText(this, "Login incorrecto", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Usuario inexistente", Toast.LENGTH_LONG).show()
         } else {
             val entrenador = resultados.first()!!
-            if (entrenador.usuario!="" && entrenador.password.equals(password)) {
+            if (entrenador.usuario != "" && entrenador.password.equals(password)) {
                 irList()
             } else {
-                Toast.makeText(this, "Login incorrecto", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_LONG).show()
             }
         }
     }
