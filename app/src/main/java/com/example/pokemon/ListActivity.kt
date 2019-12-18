@@ -23,6 +23,9 @@ class ListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
+
+
+        setSupportActionBar(toolbar)
         supportActionBar!!.title = "Pokemon List"
 
         retrofit = Retrofit.Builder()

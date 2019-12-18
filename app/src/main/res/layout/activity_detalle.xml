@@ -22,13 +22,12 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FAF8F8"
+            android:layout_height="60dp"
             android:minHeight="?attr/actionBarSize"
-            app:fontFamily="@font/delius"
-            android:textColor="#FFC107"
-            android:textSize="25sp"
-            android:theme="?attr/actionBarTheme" />
+            android:background="#000000"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
 
     </LinearLayout>
 

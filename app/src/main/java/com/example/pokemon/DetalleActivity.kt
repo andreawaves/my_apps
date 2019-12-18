@@ -28,6 +28,7 @@ class DetalleActivity : AppCompatActivity() {
             .into(iv_foto)
 
 
+        setSupportActionBar(toolbar)
         supportActionBar!!.title = "Información"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
