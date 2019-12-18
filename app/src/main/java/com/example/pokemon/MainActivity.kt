@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //supportActionBar!!.hide()
-
         btn_login.setOnClickListener { verificar() }
         btn_registro.setOnClickListener { irRegistro() }
 

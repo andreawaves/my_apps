@@ -28,7 +28,6 @@
             android:background="#000000"
             app:titleTextAppearance="@style/Toolbar.TitleText"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
     </LinearLayout>
 
     <ScrollView
